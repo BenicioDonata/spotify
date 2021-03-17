@@ -4,9 +4,10 @@ namespace App\Codes;
 
 class ApiCode {
 
-    public const INVALID_DATA_EMAIL = 251;
-    public const INVALID_DATA_EMAIL_RISK = 252;
-    public const INVALID_DATA_MOBILE = 253;
-    public const INVALID_DATA_MOBILE_RISK = 254;
+    public const BAD_REQUEST = 400;
+    public const BAD_REQUEST_STRING = "BAD REQUEST";
+    public const FAIL_RESPONSE = 500;
+    public const FAIL_RESPONSE_STRING = "INTERNAL SERVER ERROR";
+
 
 }

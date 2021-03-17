@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "dbda99b5-fd37-4526-8c54-5b4fe92a8cd4",
+		"name": "API Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Obtener Token en Spotify PROD",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "Basic ODkxYjViZWE3YWMxNGQ2OGFlOTc0ZGU5YTU5OWMxNzc6OWZhNzQyMWIyNjU2NDlkY2E2NmU0NjEyZDRjOTEyZGI=",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET TOKEN URL PROD",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://accounts.spotify.com/api/token",
+							"protocol": "https",
+							"host": [
+								"accounts",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 17 Mar 2021 04:03:19 GMT"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "sp-trace-id",
+							"value": "e8a963a019c6d967"
+						},
+						{
+							"key": "strict-transport-security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "content-encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "server",
+							"value": "envoy"
+						},
+						{
+							"key": "Via",
+							"value": "HTTP/2 edgeproxy, 1.1 google"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "clear"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"BQDXhqwXNQ4KBsLh8AiqMiBJ1-BauoQky2TKDmlNsLgaJUL6PHxFRXVbju5u-WgADmsO6ltvpm-fSMjqzKU\",\n    \"token_type\": \"Bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "GET - Discography by Band Name URL LOCAL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"band_name\" : \"test\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base_local}}/api/v1/albums",
+					"host": [
+						"{{url_base_local}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"albums"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET - Discography by Band Name or Artist",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"band_name\" : \"1vCWHaC5f2uS3yhpwWbIA6\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base_local}}/api/v1/albums",
+							"host": [
+								"{{url_base_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 17 Mar 2021 05:49:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"TIM\",\n        \"release_date\": \"2019-06-06\",\n        \"total_tracks\": 12\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 16\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 14\n    },\n    {\n        \"name\": \"The Days \\/ Nights\",\n        \"release_date\": \"2014-01-01\",\n        \"total_tracks\": 4\n    },\n    {\n        \"name\": \"True: Avicii By Avicii\",\n        \"release_date\": \"2014-01-01\",\n        \"total_tracks\": 9\n    },\n    {\n        \"name\": \"True (Bonus Edition)\",\n        \"release_date\": \"2013-09-16\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"True\",\n        \"release_date\": \"2013-01-01\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"True\",\n        \"release_date\": \"2013-01-01\",\n        \"total_tracks\": 10\n    },\n    {\n        \"name\": \"Forever Yours (Avicii Tribute)\",\n        \"release_date\": \"2020-01-24\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Fades Away (feat. MishCatt) [Tribute Concert Version]\",\n        \"release_date\": \"2019-12-05\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Heaven (David Guetta & MORTEN Remix)\",\n        \"release_date\": \"2019-08-23\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"Tough Love (Ti\\u00ebsto Remix)\",\n        \"release_date\": \"2019-06-14\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"SOS (Laidback Luke Tribute Remix)\",\n        \"release_date\": \"2019-05-17\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"Tough Love (feat. Vargas & Lagola)\",\n        \"release_date\": \"2019-05-09\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"SOS (feat. Aloe Blacc)\",\n        \"release_date\": \"2019-04-10\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Lonely Together (Remixes)\",\n        \"release_date\": \"2017-11-17\",\n        \"total_tracks\": 4\n    },\n    {\n        \"name\": \"Lonely Together (Acoustic)\",\n        \"release_date\": \"2017-10-27\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Without You (Remixes)\",\n        \"release_date\": \"2017-10-13\",\n        \"total_tracks\": 5\n    },\n    {\n        \"name\": \"AV\\u012aCI (01)\",\n        \"release_date\": \"2017-08-10\",\n        \"total_tracks\": 6\n    }\n]"
+				}
+			]
+		}
+	]
+}

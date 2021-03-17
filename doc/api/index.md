@@ -1,138 +1,125 @@
-# Api Unnax
+# Api Spotify
 
-### PayOut
+### Get an Artist's Albums
 
-_pk = Número generado automaticamente con la creacion del registro._
+_1 - Primera paso es la obtención del token a través de la API pasando por el Header el tipo de Authorization Basic con un valor en base 64 del CLIENT ID y el SECRET ID y en el body el parámetro grant_type._
 
+_2 - Luego de obtener el token seguimos con los siguientes ejemplos para el consumo del endpoint de la API para obtener el listado de álbumes._
 
-- **Crear registro en PayOut**
-
-  - Method : POST
-  - URL: /api/service/payout
-  
-  
-
-  | Attribute                   | Type                 | Required | Description                                               | Example                          |
-  | :---------------------------| :--------------------| :--------| :---------------------------------------------------------| :--------------------------------|
-  | `omburequest_id `           | integer              | Si       | Fk de la tabla solicitudes (order code).                  | 1                                |
-  | `amount`                    | integer              | Si       | Cantidad en unidades de centavos.                         | 10050 (100,50)                   |
-  | `currency`                  | string               | Si       | 'EUR' por defecto. Código de tres letras según ISO 4217.  | EUR                              |
-  | `customer_code`             | string               | Si       | Número de documento de identidad del cliente.             | 12345679                         |
-  | `concept`                   | string               | Si       | Concepto de pedido personalizado.                         | Transfer                         |
-  | `destination_account`       | String               | Si       | Hash de la cuenta de destino.                             | ES8699992021230310034482         |
-  | `owner`                     | String               | Si       | Proveedor.                                                | Fastcredit                       |
-  | `customer`                  | string               | Si       | Cliente.                                                  | Test                             |
-
-_Ejemplo de creacion de un registro:_
+_Ejemplo de como obtener el listado de albunes de un artista o banda, se pasa como parametro un id de tipo string:_
 
 ```json
 {
-    "amount" : 700,
-    "customer_names" : "Name Surname", 
-    "customer_code" : "12345679", 
-    "order_code" : "9", 
-    "concept" : "Transfer",
-    "destination_account" : "ES8699992021230310034482",
-    "owner": "fastcredit",
-    "customer": "test"
+
+"band_name" : "1vCWHaC5f2uS3yhpwWbIA6"
+    
 }
 ```
 
-_Ejemplo de respuesta a la creacion de registro:_
+_Ejemplo del respuesta de la api al obtener el listado de albunes del artista o banda:_
 
-```json
-  {
-      "success": true,
-      "code": 0,
-      "locale": "en",
-      "message": "OK",
-      "data": {
-          "item": {
-              "omburequest_id": 9,
-              "amount": 700,
-              "currency": "EUR",
-              "customer_code": "12345679",
-              "concept": "Transfer",
-              "destination_account": "ES8699992021230310034482",
-              "owner": "fastcredit",
-              "customer": "test",
-              "updated_at": "2021-03-08T01:51:31.000000Z",
-              "created_at": "2021-03-08T01:51:31.000000Z",
-              "id": 6,
-              "omburequest": {
-                  "id": 9,
-                  "negocio_id": 3,
-                  "marca_id": null,
-                  "ws_usuario_id": 3,
-                  "fechahora": "2021-01-29 11:23:53",
-                  "estado": "HAB",
-                  "estado_solicitud": "PEND",
-                  "prestamo_id": null,
-                  "data": "{\"monto\": \"5000\", \"plazo\": \"7\", \"plan_id\": \"2\"}",
-                  "usuario_id": null,
-                  "fechahora_modif": "2021-01-29 11:23:53",
-                  "comentario": null
-              }
-          }
-      }
-  }
 ```
-
-
-_Ejemplo de respuesta cuando el código de orden bancaria ya existe en el banco para transferir:_
-
-```json
+[
 {
-    "success": false,
-    "code": 400,
-    "locale": "en",
-    "message": "Bank order code already exists",
-    "data": null,
-    "debug": []
-}
-```
-
-_Ejemplo de respuesta cuando se envia un request sin datos:_
-
-```json
+"name": "TIM",
+"release_date": "2019-06-06",
+"total_tracks": 12
+},
 {
-    "success": false,
-    "code": 411,
-    "locale": "en",
-    "message": "Data was expected in the request.",
-    "data": null,
-    "debug": []
-}
-```
-
-
-_Ejemplo de envio de datos en el request sin uno de los campos requeridos:_
-
-```json
+"name": "Stories",
+"release_date": "2015-10-02",
+"total_tracks": 16
+},
 {
-    "amount" : "800" ,
-    "customer_names" : "Name Surname2", 
-    "customer_code" : "", 
-    "order_code" : "9", 
-    "concept" : "Transfer",
-    "destination_account" : "ES8699992021230310034482",
-    "owner": "fastcredit",
-    "customer": "test"
-}
-```
-
-
-_Ejemplo de respuesta cuando no envia uno de de los datos requeridos en el request:_
-
-```json
+"name": "Stories",
+"release_date": "2015-10-02",
+"total_tracks": 15
+},
 {
-    "success": false,
-    "code": 411,
-    "locale": "en",
-    "message": "Data was expected in the request.",
-    "data": null,
-    "debug": []
+"name": "Stories",
+"release_date": "2015-10-02",
+"total_tracks": 14
+},
+{
+"name": "The Days \/ Nights",
+"release_date": "2014-01-01",
+"total_tracks": 4
+},
+{
+"name": "True: Avicii By Avicii",
+"release_date": "2014-01-01",
+"total_tracks": 9
+},
+{
+"name": "True (Bonus Edition)",
+"release_date": "2013-09-16",
+"total_tracks": 15
+},
+{
+"name": "True",
+"release_date": "2013-01-01",
+"total_tracks": 15
+},
+{
+"name": "True",
+"release_date": "2013-01-01",
+"total_tracks": 10
+},
+{
+"name": "Forever Yours (Avicii Tribute)",
+"release_date": "2020-01-24",
+"total_tracks": 1
+},
+{
+"name": "Fades Away (feat. MishCatt) [Tribute Concert Version]",
+"release_date": "2019-12-05",
+"total_tracks": 1
+},
+{
+"name": "Heaven (David Guetta & MORTEN Remix)",
+"release_date": "2019-08-23",
+"total_tracks": 2
+},
+{
+"name": "Tough Love (Ti\u00ebsto Remix)",
+"release_date": "2019-06-14",
+"total_tracks": 2
+},
+{
+"name": "SOS (Laidback Luke Tribute Remix)",
+"release_date": "2019-05-17",
+"total_tracks": 2
+},
+{
+"name": "Tough Love (feat. Vargas & Lagola)",
+"release_date": "2019-05-09",
+"total_tracks": 1
+},
+{
+"name": "SOS (feat. Aloe Blacc)",
+"release_date": "2019-04-10",
+"total_tracks": 1
+},
+{
+"name": "Lonely Together (Remixes)",
+"release_date": "2017-11-17",
+"total_tracks": 4
+},
+{
+"name": "Lonely Together (Acoustic)",
+"release_date": "2017-10-27",
+"total_tracks": 1
+},
+{
+"name": "Without You (Remixes)",
+"release_date": "2017-10-13",
+"total_tracks": 5
+},
+{
+"name": "AV\u012aCI (01)",
+"release_date": "2017-08-10",
+"total_tracks": 6
 }
+]
 ```
 
-----
