@@ -174,6 +174,130 @@
 			},
 			"response": [
 				{
+					"name": "ERROR - GET - Discography by Band Name or Artist - BAD REQUEST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base_local}}/api/v1/albums",
+							"host": [
+								"{{url_base_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Mar 2021 10:19:01 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Mar 2021 10:19:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"http_code\": 400,\n    \"detail\": \"BAD REQUEST\"\n}"
+				},
+				{
+					"name": "ERROR - GET - Discography by Band Name or Artist - INTERNAL SERVER ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"band_name\" : \"\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_base_local}}/api/v1/albums",
+							"host": [
+								"{{url_base_local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"albums"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Mar 2021 10:19:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 29 Mar 2021 10:19:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"http_code\": 500,\n    \"detail\": \"INTERNAL SERVER ERROR\"\n}"
+				},
+				{
 					"name": "GET - Discography by Band Name or Artist",
 					"originalRequest": {
 						"method": "GET",

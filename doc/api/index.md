@@ -192,4 +192,42 @@ _Ejemplo del respuesta de la api al obtener el listado de albunes del artista o 
     }
 ]
 ```
+_Ejemplo de no body en el request:_
+
+```
+{
+    
+}
+```
+
+_Respuesta de error al no enviar body en el request:_
+
+```
+{
+   "success": false,
+   "http_code": 400,
+   "detail": "BAD REQUEST"
+}
+```
+_Ejemplo de parametro vacio en el request:_
+
+```
+{
+
+"band_name" : ""
+    
+}
+```
+
+_Respuesta de error al recibir un parametro vacio en el body:_
+
+```
+{
+    "success": false,
+    "http_code": 500,
+    "detail": "INTERNAL SERVER ERROR"
+}
+```
+
+
 
