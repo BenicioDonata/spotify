@@ -14,7 +14,7 @@ class SpotifyAdapter
         $response = Http::withHeaders
         (['Content-Type' => 'application/json',
             'Authorization' => 'Bearer '. $token])
-            ->get(env('URL_SPOTIFY_ALBUMS_BY_BAND_NAME')."/".$band_name."/albums");
+            ->get(env('URL_SPOTIFY_ALBUMS_BY_BAND_NAME').$band_name .'&type=album');
 
 
         return json_decode($response);

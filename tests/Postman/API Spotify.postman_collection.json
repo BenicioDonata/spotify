@@ -38,12 +38,7 @@
 							"value": "client_credentials",
 							"type": "text"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
 					"raw": "https://accounts.spotify.com/api/token",
@@ -149,7 +144,7 @@
 			]
 		},
 		{
-			"name": "GET - Discography by Band Name URL LOCAL",
+			"name": "GET - Discography by Band Name or Artist",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -158,7 +153,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\n\"band_name\" : \"test\"\n    \n}",
+					"raw": "{\n\n\"band_name\" : \"las pastillas del abuelo\"\n    \n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -185,7 +180,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\n\"band_name\" : \"1vCWHaC5f2uS3yhpwWbIA6\"\n    \n}",
+							"raw": "{\n\n\"band_name\" : \"las pastillas del abuelo\"\n    \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -214,7 +209,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 17 Mar 2021 05:49:11 GMT"
+							"value": "Mon, 29 Mar 2021 10:05:41 GMT"
 						},
 						{
 							"key": "Connection",
@@ -230,7 +225,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"name\": \"TIM\",\n        \"release_date\": \"2019-06-06\",\n        \"total_tracks\": 12\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 16\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"Stories\",\n        \"release_date\": \"2015-10-02\",\n        \"total_tracks\": 14\n    },\n    {\n        \"name\": \"The Days \\/ Nights\",\n        \"release_date\": \"2014-01-01\",\n        \"total_tracks\": 4\n    },\n    {\n        \"name\": \"True: Avicii By Avicii\",\n        \"release_date\": \"2014-01-01\",\n        \"total_tracks\": 9\n    },\n    {\n        \"name\": \"True (Bonus Edition)\",\n        \"release_date\": \"2013-09-16\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"True\",\n        \"release_date\": \"2013-01-01\",\n        \"total_tracks\": 15\n    },\n    {\n        \"name\": \"True\",\n        \"release_date\": \"2013-01-01\",\n        \"total_tracks\": 10\n    },\n    {\n        \"name\": \"Forever Yours (Avicii Tribute)\",\n        \"release_date\": \"2020-01-24\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Fades Away (feat. MishCatt) [Tribute Concert Version]\",\n        \"release_date\": \"2019-12-05\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Heaven (David Guetta & MORTEN Remix)\",\n        \"release_date\": \"2019-08-23\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"Tough Love (Ti\\u00ebsto Remix)\",\n        \"release_date\": \"2019-06-14\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"SOS (Laidback Luke Tribute Remix)\",\n        \"release_date\": \"2019-05-17\",\n        \"total_tracks\": 2\n    },\n    {\n        \"name\": \"Tough Love (feat. Vargas & Lagola)\",\n        \"release_date\": \"2019-05-09\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"SOS (feat. Aloe Blacc)\",\n        \"release_date\": \"2019-04-10\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Lonely Together (Remixes)\",\n        \"release_date\": \"2017-11-17\",\n        \"total_tracks\": 4\n    },\n    {\n        \"name\": \"Lonely Together (Acoustic)\",\n        \"release_date\": \"2017-10-27\",\n        \"total_tracks\": 1\n    },\n    {\n        \"name\": \"Without You (Remixes)\",\n        \"release_date\": \"2017-10-13\",\n        \"total_tracks\": 5\n    },\n    {\n        \"name\": \"AV\\u012aCI (01)\",\n        \"release_date\": \"2017-08-10\",\n        \"total_tracks\": 6\n    }\n]"
+					"body": "[\n    {\n        \"name\": \"Las Pastillas del Abuelo\",\n        \"release_date\": \"2006\",\n        \"total_tracks\": 12,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2737f39f9822cb3794442322a70\"\n        }\n    },\n    {\n        \"name\": \"Paradojas\",\n        \"release_date\": \"2015-10-23\",\n        \"total_tracks\": 12,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273ecad4ede5962e85c6391fe88\"\n        }\n    },\n    {\n        \"name\": \"2020\",\n        \"release_date\": \"2020-11-13\",\n        \"total_tracks\": 10,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273dde1c62f72d240ad3b9c4176\"\n        }\n    },\n    {\n        \"name\": \"Desaf\\u00edos\",\n        \"release_date\": \"2015-08-25\",\n        \"total_tracks\": 13,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b27313557a104cadb4b9868f1bd2\"\n        }\n    },\n    {\n        \"name\": \"Por Colectora\",\n        \"release_date\": \"2005-10-01\",\n        \"total_tracks\": 12,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2730e1cc83e61285410446b1906\"\n        }\n    },\n    {\n        \"name\": \"El Favor\",\n        \"release_date\": \"2019-11-20\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2733545c1a1a8cff9c8bc45803a\"\n        }\n    },\n    {\n        \"name\": \"Versiones\",\n        \"release_date\": \"2010\",\n        \"total_tracks\": 10,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2734cb0c37844d05acc6d405867\"\n        }\n    },\n    {\n        \"name\": \"Vivo De Pastillas: Locura Y Realidad (Live In Buenos Aires \\/ 2016)\",\n        \"release_date\": \"2017-11-10\",\n        \"total_tracks\": 18,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273139bed0e823fe7e9691ea587\"\n        }\n    },\n    {\n        \"name\": \"El Barrio en Sus Pu\\u00f1os\",\n        \"release_date\": \"2014-09-08\",\n        \"total_tracks\": 12,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b27393834232f53be27647cbfcc4\"\n        }\n    },\n    {\n        \"name\": \"10 A\\u00f1os en Vivo en el Luna (En Vivo)\",\n        \"release_date\": \"2013-03-11\",\n        \"total_tracks\": 10,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b27374ef41f715b6822793cb2843\"\n        }\n    },\n    {\n        \"name\": \"Incontinencia Verbal\",\n        \"release_date\": \"2019-03-29\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273f740dc70a40c78394ec71db7\"\n        }\n    },\n    {\n        \"name\": \"M\\u00e1s Lejos\",\n        \"release_date\": \"2019-08-16\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b27397c1bb4e1e0467407c3b2db8\"\n        }\n    },\n    {\n        \"name\": \"Interpretaci\\u00f3n\",\n        \"release_date\": \"2020-04-20\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2738a1f1ec12da02d14b7fba6b3\"\n        }\n    },\n    {\n        \"name\": \"En Vivo en la Kermesse\",\n        \"release_date\": \"2012-11-18\",\n        \"total_tracks\": 7,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273bc9df3cac1d85d138bfff68d\"\n        }\n    },\n    {\n        \"name\": \"Inercia\",\n        \"release_date\": \"2015-09-08\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b2732b4f87ad444ec4afc1106e12\"\n        }\n    },\n    {\n        \"name\": \"Realidad (En Vivo Estadio Unico 2017) (with Las Pastillas Del Abuelo)\",\n        \"release_date\": \"2018-05-24\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b27306d959e58eb9669b81e1c75e\"\n        }\n    },\n    {\n        \"name\": \"Absolutismos\\u2026\",\n        \"release_date\": \"2017-09-01\",\n        \"total_tracks\": 1,\n        \"cover\": {\n            \"height\": 640,\n            \"width\": 640,\n            \"url\": \"https:\\/\\/i.scdn.co\\/image\\/ab67616d0000b273d3e6381390238656f420b156\"\n        }\n    }\n]"
 				}
 			]
 		}

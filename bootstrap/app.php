@@ -23,7 +23,7 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-//se habilita si tenes artisan 
+//se habilita si tenes artisan para correr php artisan serve
 // $app->instance('path.config', app()->basePath() . DIRECTORY_SEPARATOR . 'config');
 // $app->instance('path.storage', app()->basePath() . DIRECTORY_SEPARATOR . 'storage');
 

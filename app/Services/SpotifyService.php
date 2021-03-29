@@ -27,18 +27,18 @@ class SpotifyService
             $albums = $this->spotifyAdapter->getAlbumsByBandName($band_name,$token);
 
             //Si por algun motivo fallo el servidor de spotify en devolverme el listado retorno false
-            if(!isset($albums->items))
+            if(!isset($albums->albums->items))
                 return false;
 
-            foreach($albums->items as $album) {
+            foreach($albums->albums->items as $album) {
 
                 $album_array[$i]['name'] =  $album->name;
                 $album_array[$i]['release_date'] =  $album->release_date;
                 $album_array[$i]['total_tracks'] =  $album->total_tracks;
+                $album_array[$i]['cover']['height'] =  $album->images[0]->height;
+                $album_array[$i]['cover']['width'] =  $album->images[0]->width;
+                $album_array[$i]['cover']['url'] =  $album->images[0]->url;
 
-                //al probar con este id 1vCWHaC5f2uS3yhpwWbIA6 no traia cover por eso la validacion a continuacion
-                if(isset($album->cover))
-                    $album_array[$i]['cover'] =  $album->cover;
 
             $i++;
             }
